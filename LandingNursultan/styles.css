@@ -1,0 +1,104 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.navbar {
+  background-color: #1c1c1c;
+}
+
+.navbar-brand, .nav-link {
+  color: #fff !important;
+  position: relative;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #00aaff;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.hero {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  text-align: center;
+  padding: 140px 0;
+}
+
+.btn-main {
+  background-color: #00aaff;
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 170, 255, 0.4);
+}
+
+.btn-main:hover {
+  background-color: #0077cc;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 170, 255, 0.6);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* 📱 Адаптация для мобильных */
+@media (max-width: 768px) {
+  h1.display-4 {
+    font-size: 2rem;
+  }
+
+  .hero {
+    padding: 80px 0;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .btn-main {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .project-card img {
+    height: auto;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+}
